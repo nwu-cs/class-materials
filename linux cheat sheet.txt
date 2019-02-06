@@ -1,0 +1,30 @@
+Basic Terminal Navigation 
+ls -a = list all files and folders cp -R stuff otherStuff = copy and rename a folder
+ls <folderName> = list files in folder cp *.txt stuff/ = copy all of *<file type> to folder
+ls -lh = Detailed list, Human readable
+ls -l *.jpg = list jpeg files only 
+ls -lh <fileName> = Result for file only 
+mv filename.txt filename2.txt = rename file
+cd <folderName> = change directory 
+if folder name has spaces use “ “ 
+cd / = go to root
+cd .. = go up one folder, tip: ../../../ = go up 3 directories
+man <command> = shows manual (RTFM) 
+date = current date and time
+
+
+Basic file manipulation
+rm <fileName> .. = delete file (s)
+mv <folderName> <folderName2> = move folder in folder
+mv file.txt Documents/ = move file to a folder
+mv <fileName> stuff/newfileName
+mv <folderName>/ <somewhere> = move folder up in hierarchy
+rm -i <fileName> = ask for confirmation each file
+touch <fileName> = create or update a file
+pwd = print working directory
+
+git commands
+git clone http://github.com/somerepo.git = clone a repo locally to your machine
+git add file1 file2 subdir1 = stage/add modified or untracked files to the repo
+git commit -m "commit message" = commit your changes to your local repo
+git push origin = push your changes back to the origin (usually github)
