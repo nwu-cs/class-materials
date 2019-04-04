@@ -61,6 +61,32 @@ class PokerHand(Hand):
         for card in self.cards:
             self.suits[card.suit] = self.suits.get(card.suit, 0) + 1
 
+
+    def has_straight(self):
+        """Checks whether this hand has a straight."""
+        # make a copy of the rank histogram before we mess with it
+        ranks = self.ranks.copy()
+        ranks[14] = ranks.get(1, 0)
+
+        # see if we have 5 in a row
+        return self.in_a_row(ranks, 5)
+
+    def in_a_row(self, ranks, n=5):
+        """Checks whether the histogram has n ranks in a row.
+
+        hist: map from rank to frequency
+        n: number we need to get to
+        """
+        count = 0
+        for i in range(1, 15):
+            if ranks.get(i, 0):
+                count += 1
+                if count == n:
+                    return True
+            else:
+                count = 0
+        return False
+    
     def has_flush(self):
         """Returns True if the hand has a flush, False otherwise.
       
@@ -71,6 +97,8 @@ class PokerHand(Hand):
             if val >= 5:
                 return True
         return False
+
+
 
     def classify(self):
         """Classifies this hand.
