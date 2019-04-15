@@ -24,8 +24,10 @@ class TestGcd(unittest.TestCase):
         self.assertEqual(gcd(49, 8), 1)
 
     def test_gcd7(self):
-        self.assertEqual(gcd(20, 5), 4)
+        self.assertEqual(gcd(20, 5), 5)
 
     def test_gcd8(self):
         self.assertEqual(gcd(130, 25), 5)
 
+if __name__ == '__main__':
+    unittest.main()
