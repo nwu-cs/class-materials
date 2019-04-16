@@ -1,6 +1,6 @@
 import unittest
 
-from dup import has_any_duplicates,num_duplicates,mylist
+from dup import has_any_duplicates,num_duplicates
 
 
 class TestDuplicates(unittest.TestCase):
@@ -19,5 +19,5 @@ class TestDuplicates(unittest.TestCase):
     def test_num_duplicate2(self):
         self.assertEqual(num_duplicates(self.a),10)
 
-    def test_class1(self):
-        c = mylist()
+if __name__ == '__main__':
+    unittest.main()

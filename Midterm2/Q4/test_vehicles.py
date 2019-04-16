@@ -28,4 +28,5 @@ class TestVehicles(unittest.TestCase):
         print(y)
         self.assertTrue(y == z)
 
-
+if __name__ == '__main__':
+    unittest.main()

@@ -20,3 +20,6 @@ class TestCrypto(unittest.TestCase):
         self.assertEqual(b,"MTGCJOSMHRXY")
         d = c.decrypt(b)
         self.assertEqual(d,"ATTACKATDAWN")
+
+if __name__ == '__main__':
+    unittest.main()

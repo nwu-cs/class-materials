@@ -10,3 +10,6 @@ class TestDuplicates(unittest.TestCase):
         y = pell(50)
         self.assertEqual(x,2015874949414289041)
         self.assertEqual(y,4866752642924153522)
+
+if __name__ == '__main__':
+    unittest.main()
